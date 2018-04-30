@@ -139,6 +139,13 @@ class TwitterFeedBlock extends BlockBase implements ContainerFactoryPluginInterf
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge() {
+    return 0;
+  }
+
   private function getBearerToken() {
     $config = \Drupal::config('twitter_feed.settings');
 
